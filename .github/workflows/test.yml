@@ -1,9 +1,9 @@
-name: Lint
+name: Test
 on: [push]
 
 jobs:
   build:
-    name: Lint
+    name: Test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -12,10 +12,8 @@ jobs:
         with:
           node-version: 14.x
 
-      - name: Lint
-        run: |
+      - run: |
           npm ci
-          npm run ci-lint
-          npm run ci-build
+          npm run test
         env:
           CI: true
