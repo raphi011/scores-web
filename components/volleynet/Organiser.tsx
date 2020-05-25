@@ -4,12 +4,11 @@ import {
   createStyles,
   withStyles,
   WithStyles,
-  Theme,
 } from '@material-ui/core/styles';
 
 import { Tournament } from '../../types';
 
-const styles = (theme: Theme) => createStyles({});
+const styles = () => createStyles({});
 
 interface Props extends WithStyles<typeof styles> {
   tournament: Tournament;
